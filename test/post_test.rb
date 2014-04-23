@@ -8,6 +8,6 @@ class PostTest < MiniTest::Unit::TestCase
     })
 
     assert_equal 'foo', post.title
-    assert_equal 'bar', post.bar
+    assert_equal 'bar', post.text
   end
 end
