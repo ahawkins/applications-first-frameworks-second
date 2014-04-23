@@ -8,3 +8,7 @@ gem 'sqlite3'
 gem 'rake'
 gem 'chassis', github: 'ahawkins/chassis'
 gem 'concord'
+
+group :test do
+  gem 'capybara', require: 'capybara'
+end
