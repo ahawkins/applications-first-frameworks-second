@@ -1,6 +1,6 @@
-require_relative 'test_helper'
+require_relative '../test_helper'
 
-class PostTest < MiniTest::Unit::TestCase
+class PostTest < MiniTest::Test
   def test_can_be_initialized_with_title_and_text
     post = Post.new({
       title: 'foo',

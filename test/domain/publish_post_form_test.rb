@@ -1,6 +1,6 @@
-require_relative 'test_helper'
+require_relative '../test_helper'
 
-class PublishPostFormTest < MiniTest::Unit::TestCase
+class PublishPostFormTest < MiniTest::Test
   def test_requires_a_title
     form = PublishPostForm.new title: nil, text: 'Foo'
 
