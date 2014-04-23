@@ -1,6 +1,6 @@
-require_relative 'test_helper'
+require_relative '../test_helper'
 
-class PublishPostTest < MiniTest::Unit::TestCase
+class PublishPostTest < MiniTest::Test
   def setup
     Chassis.repo.clear
   end
