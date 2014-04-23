@@ -1,0 +1,15 @@
+<%= form_tag posts_path, method: :post do %>
+  <p>
+    <%= label_tag 'post_title', 'Title' %>
+    <%= text_field_tag 'post[title]' %>
+  </p>
+
+  <p>
+    <%= label_tag 'post_text', 'Text' %>
+    <%= text_area_tag 'post[text]' %>
+  </p>
+
+  <p>
+    <%= submit_tag 'Publish', id: 'publish' %>
+  </p>
+<% end %>
