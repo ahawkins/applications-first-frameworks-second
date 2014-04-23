@@ -19,6 +19,9 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    adamantium (0.2.0)
+      ice_nine (~> 0.11.0)
+      memoizable (~> 0.4.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -27,6 +30,9 @@ GEM
     breaker (0.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
+    concord (0.1.5)
+      adamantium (~> 0.2.0)
+      equalizer (~> 0.0.9)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     equalizer (0.0.9)
@@ -39,6 +45,8 @@ GEM
     ice_nine (0.11.0)
     logger-better (0.1.0)
     manifold (1.0.2)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
     multi_json (1.9.2)
     multipart-post (2.0.0)
     prox (0.0.1)
@@ -77,4 +85,5 @@ PLATFORMS
 
 DEPENDENCIES
   chassis!
+  concord
   rake
