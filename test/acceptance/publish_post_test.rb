@@ -13,5 +13,13 @@ module AcceptanceTests
       assert page.has_content?('Magic Post'), 'Title missing'
       assert page.has_content?('Oh so Magical'), 'Text missing'
     end
+
+    def test_shows_an_error_message_if_invalid_data
+      visit '/posts/new'
+
+      click_button :publish
+
+      assert page.has_css?('#error'), 'Error not displayed'
+    end
   end
 end

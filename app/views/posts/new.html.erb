@@ -1,3 +1,7 @@
+<% if @error %>
+  <p id='error'>Hey, did you fill everything in?</p>
+<% end %>
+
 <%= form_tag posts_path, method: :post do %>
   <p>
     <%= label_tag 'post_title', 'Title' %>
