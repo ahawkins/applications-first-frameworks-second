@@ -10,8 +10,8 @@ module AcceptanceTests
 
       click_button :publish
 
-      assert page.has_content('Magic Post')
-      assert page.has_content('Oh so Magical')
+      assert page.has_content?('Magic Post'), 'Title missing'
+      assert page.has_content?('Oh so Magical'), 'Text missing'
     end
   end
 end

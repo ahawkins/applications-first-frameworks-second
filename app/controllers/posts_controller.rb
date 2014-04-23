@@ -12,6 +12,6 @@ class PostsController < ApplicationController
   end
 
   def show
-
+    @post = PostRepo.find params[:id].to_i
   end
 end
