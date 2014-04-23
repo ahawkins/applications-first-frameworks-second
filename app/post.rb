@@ -1,10 +1,6 @@
 class Post
-  attr_accessor :title, :text
+  include Chassis::Initializable
 
-  def initialize(hash = {})
-    hash.each_pair do |key, value|
-      send "#{key}=", value
-    end
-  end
+  attr_accessor :title, :text
 end
 
