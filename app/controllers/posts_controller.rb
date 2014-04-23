@@ -9,6 +9,9 @@ class PostsController < ApplicationController
     post = use_case.execute
 
     redirect_to post_path(id: post.id)
+  rescue ValidationError
+    @error = true
+    render :new
   end
 
   def show

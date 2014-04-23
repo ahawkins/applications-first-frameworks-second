@@ -5,7 +5,7 @@ class PublishPostForm
   attribute :text, String
 
   def validate
-    fail ValidationError, :title_blank unless title
-    fail ValidationError, :text_blank unless text
+    fail ValidationError, :title_blank if title.to_s.strip.empty?
+    fail ValidationError, :text_blank if text.to_s.strip.empty?
   end
 end
