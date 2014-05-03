@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
   def new
-    @form = PublishPostForm.new
+    @form = Web::PublishPostForm.new
   end
 
   def create
-    form = PublishPostForm.new params[:post]
-    use_case = PublishPost.new form
+    @form = Web::PublishPostForm.new params[:web_publish_post_form]
+
+    use_case = PublishPost.new @form
     post = use_case.execute
 
     redirect_to post_path(id: post.id)

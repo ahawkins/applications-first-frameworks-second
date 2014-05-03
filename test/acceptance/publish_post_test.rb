@@ -5,8 +5,8 @@ module AcceptanceTests
     def test_publishes_the_post
       visit '/posts/new'
 
-      fill_in :post_title, with: 'Magic Post'
-      fill_in :post_text, with: 'Oh so Magical'
+      fill_in :web_publish_post_form_text, with: 'Magic Post'
+      fill_in :web_publish_post_form_title, with: 'Oh so Magical'
 
       click_button :publish
 
